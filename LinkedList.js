@@ -102,7 +102,6 @@ class LinkedList {
         if (index === 0) return this.shift(index);
         if (index === this.length) return this.pop();
         if (index < 0 || index >= this.length) return undefined;
-
         var before = this.get(index - 1);
         var temp = before.next;
         before.next = temp.next;
@@ -130,4 +129,3 @@ class LinkedList {
 
 const linkedList = new LinkedList(4);
 linkedList.push(7);
-linkedList.push(5);
